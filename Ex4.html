@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Exercise 4</title>
+</head>
+<body>
+    
+   
+    <script>
+        /* Exercise 4 
+        
+        Crear un algoritmo que imprima los números del 1 al 100 y del 101 al 200. El usuario debe
+        poder escoger la opción a imprimir.*/
+
+/* document.write("<h1>Excercise 1 | Project 1</h1>");
+
+    let userOption = Number(prompt(`What group of numbers are you see?\n 1: From 1 to 100\n  2: From 101 to 200 `, ["1 or 2"]));  
+    
+
+    let one= []; two = [];
+
+        switch (userOption) {
+                case 1:
+                for(i=1; i <= 100; i++){
+                    one[i] = (i+1);
+                    document.write(`The list of numbers is: ${one}  <br>`);
+                }
+                
+                    break;
+                case 2:
+                for(j=101; j <= 200; j++){
+                    two[j] = (j+1);
+                    document.write(`The list of numbers is: ${two}  <br>`);
+                }
+                    break;              
+                default:
+                
+                    break;
+        } */
+        
+//option 2
+
+/* document.write("<h1>Excercise 1 | Project 1</h1>");
+
+let userOption = Number(prompt(`What group of numbers are you see?\n 1: From 1 to 100\n  2: From 101 to 200 `, ["1 or 2"]));  
+
+
+let one= []; two = [];
+
+    switch (userOption) {
+            case 1:
+            for(i=0; i < 100; i++){
+                one[i] = (i+1);
+            }
+            document.write(`The list of numbers is: ${one}  <br>`);
+                break;
+            case 2:
+            for(var j=0; j < 200; j++){
+                two[j] = (j+1);
+            }
+            document.write(`The list of numbers is: ${two}  <br>`);
+
+                break;              
+            default:
+            
+                break;
+    } */
+
+// option 3
+
+document.write("<h1>Excercise 1 | Project 1</h1>");
+
+let userOption = Number(prompt(`What group of numbers are you see?\n 1: From 1 to 100\n  2: From 101 to 200 `, ["1 or 2"]));  
+
+
+
+    switch (userOption) {
+            case 1:
+            for(i=1; i <= 100; i++){
+                
+                document.write(` ${i}, `);
+            }
+           
+                break;
+            case 2:
+            for(var j=100; j < 200; j++){
+                
+                document.write(`  ${j+1}, `);
+            }
+            
+
+                break;              
+            default:
+            
+                break;
+    }
+
+
+/* Ejemplo 2 del random */
+/* lo que creo
+Math.floor(Math.random() * 50)+1; aproxima al mayor
+Math.round(Math.random() * 50)+1; redondea bien
+Math.round(Math.random(50-0); de 0 a 50
+Math.trunc() trunk para un entero y un decimasl
+
+
+opciones compañeros
+Math.random()*(50-2)+2
+parseInt(Math.random() * (50 - 0))
+
+
+Lo del profe
+Math.round(Math.random(50-0));
+De Kamilo Munevar para todos:  11:09 AM
+Math.floor(Math.random() * 50+1);
+
+Math.floor(Math.random() * 51);
+
+//Pruebas
+dato = "andrea"
+"andrea"
+dato.split(/a/)
+(3) ["", "ndre", ""]
+dato1="andrea lorena"
+"andrea lorena"
+dato1.split(/ /)
+(2) ["andrea", "lorena"]
+dato3=" andrea"
+" andrea"
+dato3.split(/ /)
+(2) ["", "andrea"]
+dato3
+" andrea"
+dato3.indexOf==" "
+false
+dato3.indexOf===" "
+false
+dato3.indexOf !==" "
+true
+dato3.indexOf
+ƒ indexOf() { [native code] }
+dato3.indexOf()
+-1 */
+
+    </script>
+ 
+</body>
+</html>

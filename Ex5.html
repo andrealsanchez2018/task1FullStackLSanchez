@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Exercise 5</title>
+</head>
+<body>
+   
+    <script>
+        /* Exesrcise 5
+        
+        Realiza un script que pida un texto e indique si es un palíndromo en un alert. Ejemplo de
+palíndromo: “amor a roma”.*/
+
+// Test 1
+
+/* let userWord = "";
+
+    userWord = prompt("Can you write a palindrome word?");    
+    
+    userWord.split()
+let reverseP= [];
+reverseP = reverse(userWord);
+console.log(userWord)
+console.log(reverseP)
+if(reverseP == userWord){
+   
+swal("Good job!", "It is a palindrome!", "success");
+    
+}else{
+   swal("Sorry!", "Keep trying!", "error");
+ 
+}   */
+
+//test 2
+
+// It works with race car and 35853
+
+/* let userWord = "";
+let separator="";
+
+let reverseP = '';
+
+    userWord = prompt("Can you write a palindrome word or number?");    
+    
+const x = userWord.split(separator)
+    // console.log(`--paso1-- este es x osea es la palabra separada: ${x}`)
+
+    reverseP = (userWord.split(separator)).reverse();
+    
+     console.log(`--paso1-- este es x despues de reverse: ${x}`)
+     console.log(`-- paso 2-- este es reverseP o sea x invertido: ${reverseP}`)
+  
+
+
+    if(reverseP == x ){
+    
+        console.log(`--paso3-- este es x osea es la palabra separada: ${x}`)
+        console.log(`--paso4 --este es reverseP o sea x invertido: ${reverseP}`)
+    swal("Good job!", "It is a palindrome!", "success");
+
+    document.write(x);
+    document.write(reverseP);
+
+        
+    } else{
+        console.log(`--paso5-- este es x osea es la palabra separada: ${x}`)
+        console.log(`--paso6 --este es reverseP o sea x invertido: ${reverseP}`)
+
+    swal("Sorry!", "Keep trying!", "error");
+    document.write(`${x} <br>`); 
+    document.write(reverseP);
+    }   */
+
+
+
+    //prueba 3 
+
+/*     let userWord = "";
+let separator="";
+
+let reverseP = '';
+
+    userWord = prompt("Can you write a palindrome word or number?");    
+    
+const x = userWord.split(separator)
+    // console.log(`--paso1-- este es x osea es la palabra separada: ${x}`)
+
+    reverseP = (userWord.split(separator)).reverse();
+    
+     console.log(`--paso1-- este es x despues de reverse: ${x}`)
+     console.log(`-- paso 2-- este es reverseP o sea x invertido: ${reverseP}`)
+  
+for(i=0; i<reverseP.length; i++){
+
+    if(reverseP [i]== x[i] ){
+    
+    console.log(`--paso3-- este es x osea es la palabra separada: ${x}`)
+    console.log(`--paso4 --este es reverseP o sea x invertido: ${reverseP}`)
+swal("Good job!", "It is a palindrome!", "success");
+
+document.write(x);
+document.write(reverseP);
+
+    
+} else{
+    console.log(`--paso5-- este es x osea es la palabra separada: ${x}`)
+    console.log(`--paso6 --este es reverseP o sea x invertido: ${reverseP}`)
+
+swal("Sorry!", "Keep trying!", "error");
+document.write(`${x} <br>`); 
+document.write(reverseP);
+}  
+
+} */
+
+//Prueba 1000
+
+document.write("<h1>Excercise 5 | Project 1</h1>");
+
+let userWord = "";
+
+
+    userWord = prompt("Can you write a palindrome word or number?"); 
+var reverseP = '';
+
+for(var i = userWord.length - 1; i >= 0; i--){
+    reverseP += userWord[i]
+}
+
+
+if(reverseP == userWord){
+    
+    swal("Good job!", "It is a palindrome!", "success");
+    document.write(` The original word: ${userWord} <br>`); 
+    document.write(` The reverse word ${reverseP} <br>`); 
+} else{
+    
+    swal("Sorry!", "Keep trying!", "error");
+    document.write(` The original word: ${userWord} <br>`); 
+    document.write(` The reverse word ${reverseP} <br>`); 
+} 
+    
+/*
+
+(Test in console)
+
+
+separador=""   
+""
+userWord.split(separador)
+(7) ["r", "a", "c", "e", "c", "a", "r"]
+x = userWord.split(separador)
+(7) ["r", "a", "c", "e", "c", "a", "r"]
+x.reverse()
+(7) ["r", "a", "c", "e", "c", "a", "r"] */
+
+/* 
+var cadena = "cadena de texto",
+    separador = "",
+    arregloDeSubCadenas = cadena.split(separador);
+
+console.log(arregloDeSubCadenas);
+// la consola devolverá: ["c", "a", "d", "e", "n", "a", " ", "d", "e", " ", "t", "e", "x", "t", "o"]
+*/
+    </script>
+  
+</body>
+</html>

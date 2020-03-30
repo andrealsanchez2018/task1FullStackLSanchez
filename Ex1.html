@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Excercise 1</title>
+</head>
+<body>
+   
+    <script>
+        /* Exercise 1 
+        
+        Pepe desea saber cuál será su calificación final en la materia de Lógica de Programación y
+Algoritmos. Dicha calificación se compone de los siguientes porcentajes:
+- 55% promedio de tres parciales
+- 30% Examen Final
+- 15% Trabajo final*/
+
+document.write("<h1>Excercise 1 | Project 1</h1>");
+
+
+let examScores=[""];
+ 
+        for(i=0; i< 3; i++){
+            
+      /* +++ failed test :( +++++ 
+      swal({ content:"scores[i] = Number(prompt(`Input Exam 1 score: ${i+1} `))",
+      content: "input" }); */
+
+            //Get the 3 exams data:
+
+            examScores[i] = Number(prompt(`Input your Exam ${i+1} score: `));   
+        }
+        exaAver= (((examScores[0] + examScores[1] + examScores[2])/3)*.55).toFixed(2);
+        document.write(`The exams average is: ${exaAver} <br>`);
+
+
+            //Get the Final exams data
+
+        exFinalScore = Number(prompt(`Input your final Exam score: `)).toFixed(2);
+        exFinalScore = (exFinalScore*.3).toFixed(2);
+
+        document.write(`The final exam general score is: ${exFinalScore} <br>`);
+
+
+            //Get the Final project data
+
+        projectScore = Number(prompt(`Input your final project score: `));
+        projectScore = (projectScore*.15).toFixed(2);
+
+        document.write(`The project general score is: ${projectScore} <br>`);
+
+            //Public Final score
+
+        finalScore =(parseFloat(exaAver) + parseFloat(exFinalScore) + parseFloat(projectScore)).toFixed(2);
+
+                if(finalScore >= 3.5){
+
+                    document.write(`Congratulation! You have been  promoved to the next level. <br> The final score is: ${finalScore} <br>`);
+
+                } else{
+                    document.write(`Sorry! You have to repeat this level, you shall get feedback in order to improve your skills. <br> The final score is: ${finalScore} <br>`);
+                 }
+
+        
+
+
+   
+
+
+
+
+
+
+    </script>
+    <!-- Inicio bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!-- Fin bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</body>
+</html>

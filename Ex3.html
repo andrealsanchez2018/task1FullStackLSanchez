@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exercise 3</title>
+</head>
+<body>
+   
+    <script>
+        /* Exercise 3
+        
+       Crear un algoritmo que pida x cantidad de números e indique el porcentaje de números
+pares y el porcentaje de números impares.*/
+
+/* console.log("Excercise 3 | Project 1");
+
+
+let allNumbers = [""];
+let evenNumbers = [];
+let oddNumbers = [];
+ 
+        for(i=0; i< 7; i++){
+            
+            
+            allNumbers[i] = parseInt(prompt(`Input a Number`));   
+            document.write(`The number ${i+1} is: ${allNumbers[i]} <br>`);
+            
+            for(j=0; j<7; j++){
+            if(allNumbers[j] == (([j]*2)-1)){
+
+                oddNumbers[j] = allNumbers[j];
+            } else{
+                evenNumbers[j] = evenNumbers[j];
+}
+        }
+        
+
+        } */
+
+//Prueba 2
+
+/* console.log("Excercise 3 | Project 1");
+
+
+let allNumbers = [""];
+let evenNumbers = [];
+let oddNumbers = [];
+ 
+        for(i=0; i< 7; i++){
+            
+            
+            allNumbers[i] = parseInt(prompt(`Input a Number`));   
+            document.write(`The number ${i+1} is: ${allNumbers[i]} <br>`);
+            
+           
+            if(allNumbers[i] == (((i*2)+1))){
+
+                oddNumbers.push(allNumbers[i]);
+
+            } else{
+                evenNumbers.push(allNumbers[i]);
+                }
+            i++;
+        
+        } */
+              
+
+//Prueba 3
+
+ /* console.log("Excercise 3 | Project 1");
+
+
+let allNumbers = [""];
+let evenNumbers = [];
+let oddNumbers = [];
+ 
+        for(i=0; i< 7; i++){
+            
+            
+            allNumbers[i] = parseInt(prompt(`Input a Number`));   
+            document.write(`The number ${i+1} is: ${allNumbers[i]} <br>`);
+            
+            for(j=0; j< allNumbers.length; j++){ 
+           
+            if(allNumbers[i] == (((j*2)+1))){
+
+                oddNumbers.push(allNumbers[i]);
+
+            } else{
+                console.log(allNumbers[i])
+                evenNumbers.push(allNumbers[i]);
+                }
+            
+            }
+        } */ 
+   // Test 4
+/* 
+   console.log("Excercise 3 | Project 1");
+
+
+let allNumbers = [""];
+let evenNumbers = [];
+let oddNumbers = [];
+ 
+        for(i=0; i< 7; i++){
+            
+            
+            allNumbers[i] = parseInt(prompt(`Input a Number`));   
+            document.write(`The number ${i+1} is: ${allNumbers[i]} <br>`);
+             
+        
+        }
+
+        for(j=0; j< allNumbers.length; j++){ 
+           
+           if(allNumbers[j] == (((j*2)+1))){
+
+               oddNumbers.push(allNumbers[j]);
+
+           } else{
+               console.log(allNumbers[j])
+               evenNumbers.push(allNumbers[j]);
+               }
+
+        } */
+
+    // Prueba 5
+
+     document.write("<h1>Excercise 3 | Project 1</h1>");
+
+
+let allNumbers = [""];
+let evenNumbers = [];
+let oddNumbers = [];
+let xEven, yOdd; 
+        for(i=0; i< 7; i++){
+            
+            
+            allNumbers[i] = parseInt(prompt(`Input a Number from 1 to 10`));   
+            document.write(`The number ${i+1} is: ${allNumbers[i]} <br> <br>`);
+            
+
+
+            for(j=0; j< 7; j++){ 
+
+
+           
+            if(allNumbers[i] == (((j*2)+1))){
+
+                oddNumbers.push(allNumbers[i]);
+                
+            } 
+
+            if(allNumbers[i] == (((j*2)+2))){
+                
+                evenNumbers.push(allNumbers[i]);
+                
+                }
+            
+            }
+        } 
+
+      
+        document.write(`<br> <hr> <br> The odd numbers are:  ${oddNumbers} <br>`);
+        document.write(`The even numbers are:  ${evenNumbers} <br>`);
+
+
+        xEven= ((Number(evenNumbers.length))*100/7).toFixed(2);
+        document.write(` <br> <hr> <br> The even numbers percent is:  ${xEven}% <br>`);
+        yOdd= ((Number(oddNumbers.length))*100/7).toFixed(2);
+        document.write(` <br> The odd numbers percent is:  ${yOdd}% <br>`);
+
+
+        //Test 6 in process with switch
+    
+/*         console.log("Excercise 3 | Project 1");
+
+
+let allNumbers = [""];
+let evenNumbers = [];
+let oddNumbers = [];
+ 
+        for(i=0; i< 7; i++){
+            
+            
+            allNumbers[i] = parseInt(prompt(`Input a Number`));   
+            document.write(`The number ${i+1} is: ${allNumbers[i]} <br>`);
+            
+
+
+            for(j=0; j< allNumbers.length; j++){ 
+
+
+            switch (allNumbers[i] == (((j*2)+1))) {
+                case 1:
+                oddNumbers.push(allNumbers[i]);
+                    break;
+                case 2:
+                evenNumbers.push(allNumbers[i]);
+                    break;              
+                default:
+                
+                    break;
+            }
+
+            
+            }
+        } */
+
+
+    </script>
+
+</body>
+</html>

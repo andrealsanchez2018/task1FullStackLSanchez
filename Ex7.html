@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Exercise 7</title>
+</head>
+<body>
+   
+    <script>
+
+           /* Exercise 7
+        
+        Crear un script que muestre una palabra o frase ingresada al revés y que indique cuántas
+letras y espacios tiene.
+ej:
+Ingrese una palabra o frase
+Hola mundo
+Tu palabra al revés es: odnum aloh
+Tiene 9 letras y 1 espacio*/
+
+  document.write("<h1>Excercise 7 | Project 1</h1>");
+
+
+let sentence = [];
+words=[];
+spaces=[];
+
+        sentence.push(prompt("Please write a Sentence")) 
+
+        a=sentence[0];
+
+        separator=""
+
+        m = a.split(separator);
+
+        n=m.reverse();
+
+        for(i=0; i< n.length;i++){
+
+            if(n[i]==" "){
+                spaces.push(n[i]);
+            }
+            else{
+                words.push(n[i]);
+            }
+
+            }  
+            
+         lSpaces= Number(spaces.length)
+         lWords= Number(words.length)
+
+         document.write(`Your reverse sentence is: ${m} <br>`);
+         document.write(`This sentence have: ${lSpaces} spaces and ${lWords} words <br>`);
+      
+
+     /*   sentence
+["andrea lorena"]
+sentence[0]
+"andrea lorena"
+a=sentence[0]
+"andrea lorena"
+a.reve
+undefined
+separator=""
+""
+a.split(separator)
+(13) ["a", "n", "d", "r", "e", "a", " ", "l", "o", "r", "e", "n", "a"]
+a.search(" ");
+6
+n=a.search(" ");
+6
+n="a.search(" ");"
+VM873:1 Uncaught SyntaxError: Unexpected string
+n.toString()
+"6"
+n.length
+undefined
+m=n.toString()
+"6"
+m.length
+1
+            
+        } */
+    </script>
+     
+
+</body>
+</html>

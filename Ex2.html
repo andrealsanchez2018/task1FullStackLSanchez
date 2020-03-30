@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 2</title>
+</head>
+<body>
+    
+    <script>
+
+     /*  Exercise 2
+     
+     Crear un algoritmo en el cual el usuario tenga que adivinar un número. Este número lo
+creará el sistema al azar. El usuario tiene solo 10 intentos y el sistema debe mostrar si el
+usuario está cerca o lejos de dar con el número programado por el sistema. */
+
+
+console.log("Exercise 2 | Project 1");
+
+
+let oportunity = 4;  // thre program gives you 4 oportunities to guess the correct number
+let machine = parseInt(Math.random() * (50 - 0)) // the machine takes a number
+
+while( oportunity > 0 ){
+    let get = parseInt(prompt('Input an aleatory number'));
+
+    if(get > machine){
+        console.log(`The correct number is smaller than ${get}`);
+    } else if(get < machine){
+        console.log(`The correct number is higher than ${get}`);
+    } else {
+        console.log(`Congratulation! You got it! The correct number is: ${get}`);
+        break;
+    }
+
+    oportunity--;
+}
+
+        if(oportunity == 0){
+            console.log('Sorry! Keep trying, the correct number was: ' + machine);
+        }     
+
+  
+
+
+    </script>
+   
+   
+        
+     
+   
+</body>
+</html>
