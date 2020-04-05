@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+     
+     body{
+        background-color: rgb(93, 136, 50);
+         
+     }
+     h1{
+         color: wheat;
+         text-align: center;
+         border-end-end-radius: solid;
+         border-color: wheat;
+         border: solid;
+     }
+        video{
+             display: block ;
+             margin: 0 auto;
+            
+        }
+
+        #containerB{
+           
+             text-align: center;
+        }
+
+        button{
+           
+            margin-top: 15px;
+            margin-right: 15px;
+           
+        }
+
+        img{
+            width: 50px;
+            height: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1 | Taller 2</h1>
+
+    <video src="img/videoEx1.mp4" id="video"></video>
+    
+    <section id="containerB"></section>
+   
+    <!-- 
+        tiempo de video currentTime
+volumen del video varible_de_video.volume 
+para pausar variable_del_video.pause()
+para despausar variable_del_video.play()
+     -->
+
+    
+     <script>
+         
+
+        /* let section= document.createElement('section')
+        section.setAttribute('id','containerB')
+       
+ */
+
+      ////  Llamar al video:
+       let videoActions = document.getElementById('video')
+
+    
+    // -------- Boton play  ------------
+        let play = document.createElement('button')
+            play.setAttribute('id','play');
+        let imgPlay = document.createElement('img')
+            imgPlay.setAttribute('src',"https://cdn3.iconfinder.com/data/icons/social-messaging-ui-color-line/254000/138-512.png");
+            
+
+            document.getElementById('containerB').appendChild(play)
+            document.getElementById('play').appendChild(imgPlay);
+
+            // Evento click en el boton:
+            play.addEventListener('click', function (){
+                console.log("algo funciona");
+                console.log(typeof(play))
+                
+                videoActions.play();
+            });
+
+
+            
+
+        // -------- Boton pause  ------------
+        let pause = document.createElement('button')
+            pause.setAttribute('id','pause');
+        let imgPause = document.createElement('img')
+            imgPause.setAttribute('src',"https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/05-512.png");
+            
+
+            document.getElementById('containerB').appendChild(pause)
+            document.getElementById('pause').appendChild(imgPause);
+
+            // Evento click en el boton:
+            pause.addEventListener('click', function (){
+                console.log("algo funciona");
+                console.log(typeof(pause))
+                
+                videoActions.pause();
+            });
+
+
+        // -------- Boton adelantar  ------------
+        let forward = document.createElement('button')
+            forward.setAttribute('id','forward');
+        let imgForward = document.createElement('img')
+            imgForward.setAttribute('src',"https://cdn3.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-1/254000/23-512.png");
+            
+
+            document.getElementById('containerB').appendChild(forward)
+            document.getElementById('forward').appendChild(imgForward);
+
+            // Evento click en el boton:
+            forward.addEventListener('click', function (){
+                console.log("algo funciona");
+                console.log(typeof(forward));
+                
+                videoActions.currentTime= videoActions.currentTime+2.0;
+
+            });
+
+            
+
+            // -------- Boton retroceder  ------------
+        let backward = document.createElement('button')
+            backward.setAttribute('id','backward');
+        let imgBackward = document.createElement('img')
+            imgBackward.setAttribute('src',"https://upload.wikimedia.org/wikipedia/commons/6/6f/Double_arrow_green_left.png");
+            
+
+            document.getElementById('containerB').appendChild(backward)
+            document.getElementById('backward').appendChild(imgBackward);
+
+            // Evento click en el boton:
+            backward.addEventListener('click', function (){
+                console.log("algo funciona");
+                console.log(typeof(backward));
+                
+                videoActions.currentTime= videoActions.currentTime-2.0;
+            });
+
+
+        // ------ Boton subir Volumen ------------
+         let up = document.createElement('button')
+            up.setAttribute('id','up');
+         let imgUp = document.createElement('img')
+            imgUp.setAttribute('src',"https://cdn0.iconfinder.com/data/icons/flat-round-arrow-arrow-head/512/Green_Arrow_Top-512.png")
+
+            //Agregar el boton up al doc HTML
+            document.getElementById('containerB').appendChild(up)
+            //Agregar la imagen dentro del boton up
+            document.getElementById('up').appendChild(imgUp);// DEBE SER DESPUES DE CREAR UP EN HTML O SINO LO TOMA COMO NULL
+        videoActions.volume = 0.1;
+            up.addEventListener('click', function(){
+                videoActions.volume < 0.9  ?  `${ videoActions.volume = videoActions.volume+0.1}`: 
+                `${alert('es el maximo volumen')}`;
+               /* prueba 4 funciona cuando el volumen empieza en 1
+                 videoActions.volume < 0.9  ?  `${ videoActions.volume = videoActions.volume+0.1} ${videoActions.volume} `: 
+                `${videoActions.volume= 0.1} ${alert('es el maximo volumen')}`;  */
+             /* prueba 3  con actualVolume comentado
+              videoActions.volume < 0.9  ?  `${videoActions.volume = videoActions.volume+0.1} `: 
+                alert('es el maximo volumen'); */
+                /* prueba 2
+                 do {
+                
+                videoActions.volume < 1  ?  `${videoActions.volume = videoActions.volume+0.1} `: 
+                alert('es el maximo volumen');
+                
+                console.log(typeof(videoActions.volume));
+                console.log(videoActions.volume);
+                    
+                } while (videoActions.volume <= 1); */
+
+               /* prueba 1
+               for(i=0; i<=1; i+0.1){
+                videoActions.volume <= 1  ?  `${videoActions.volume = videoActions.volume+0.1} `: alert('es el maximo volumen');
+                
+                console.log(typeof(videoActions.volume));
+                console.log(videoActions.volume);
+
+               } */
+              /*  actualVolume < 10  ?  actualVolume++ : alert('es el maximo volumen');
+               console.log(actualVolume); */
+            //    videoActions.a
+            })
+        // -------- Boton bajar Volumen ------------
+        let down = document.createElement('button')
+            down.setAttribute('id','down');
+        let imgDown = document.createElement('img')
+            imgDown.setAttribute('src',"https://getdrawings.com/free-icon/arrow-icon-55.png");
+
+            document.getElementById('containerB').appendChild(down)
+            document.getElementById('down').appendChild(imgDown);
+
+            down.addEventListener('click', function(){
+                videoActions.volume > 0 ?  `${ videoActions.volume = videoActions.volume-0.1}`: 
+                `${alert('es el mínimo volumen')}`;
+            });
+        // -------- Boton muted  ------------
+        let muted = document.createElement('button')
+            muted.setAttribute('id','muted');
+        let imgMuted = document.createElement('img')
+            imgMuted.setAttribute('src',"https://cdn2.iconfinder.com/data/icons/multimedia-sound-7/48/Mute-Audio-_volume-512.png");
+            
+
+            document.getElementById('containerB').appendChild(muted)
+            document.getElementById('muted').appendChild(imgMuted);
+
+            // Evento click en el boton:
+            muted.addEventListener('click', function (){
+                console.log("algo funciona");
+                console.log(typeof(muted))
+                //m.play();
+                videoActions.volume = 0;
+            });
+
+         //document.getElementById('containerB').appendChild(up,down,muted);
+         /* video.addEventListener()
+         video.pause()
+         video.play()
+         video.muted()
+         video.volume(1)
+         video.volume(-1) */
+     </script>
+</body>
+</html>

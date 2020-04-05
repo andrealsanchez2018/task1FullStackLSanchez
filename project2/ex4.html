@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+
+        *{
+            background-color:rgb(93, 55, 230);
+        }
+
+        h1{
+            color: white;
+            font-size: 50px;
+            margin-bottom: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin: 0 auto;
+        }
+        div{
+            text-align: center;
+            margin-top: 10px;  
+        }
+        button{
+            background-color: wheat;
+            margin-right: 20px;
+        }
+        .ibot{
+            background-color: wheat;
+            width: 50px;
+            height: 50px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 4 | Proyecto 2</h1>
+
+    <img id="img" src="https://lh3.googleusercontent.com/proxy/Fe--93Xx7HaEfsG8tG55T2_bmfEY2BUBgnR5APo99s18hc2ybZd4IANnmXTO07fy7zk3x5oAfziD9eddykXMupwfr9u1YryvODSVRtmPi34" alt="">
+  <div>
+    <button id="in" onclick="setZin();"><img class="ibot" src="https://cdn0.iconfinder.com/data/icons/social-messaging-productivity-5/128/zoom-in-512.png" alt=""></button><!-- Zoom in -->
+    <button id="out" onclick="setZout();"><img class="ibot" src="https://cdn4.iconfinder.com/data/icons/basic-43/19/XMLID_331-512.png" alt=""></button> <!-- zoom Out -->
+  </div>  
+  <script>
+      var imgP = document.getElementById('img');
+     // setInterval in
+     
+          function setZin(){
+            var  cont = 0
+            let aumento = setInterval(function zoomin(){
+                
+                
+                imgP.style.width = `${imgP.clientWidth+2}px`
+                imgP.style.height = `${imgP.clientHeight+2}px`
+                cont++; 
+                    if(cont == 20){
+                        clearInterval(aumento);   
+                        console.log(aumento)  
+                    } 
+                        } 
+                , 70);
+                console.log(cont)      
+    }
+                
+
+     // setInterval out
+
+        function setZout(){
+            var  cont = 0
+            let disminuye = setInterval(function zoomout(){
+                
+                
+                imgP.style.width = `${imgP.clientWidth-2}px`
+                imgP.style.height = `${imgP.clientHeight-2}px`
+                cont++; 
+                    if(cont == 20){
+                        clearInterval(disminuye);   
+                        console.log(disminuye)  
+                    } 
+                        } 
+                , 70);
+                console.log(cont) 
+
+     } 
+
+
+       
+
+        
+  </script>
+</body>
+</html>   

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+
+
+        h1{
+            font-size: 50px;
+            margin-bottom: 50px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .cont{
+            background-color: whitesmoke;
+        }
+
+        #container{
+            text-align: center;
+            padding: 150px 0 220px 0;
+            max-width: 100%;
+            max-height:100%;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            align-items: center;
+            display: inline-block; 
+            margin-right: 7px;
+           
+        }
+
+        /* ID'S */
+
+        #rosado{
+           
+            border-style: solid;
+            background-color: #ff80ff;
+
+        }
+        #purpura{
+            
+            border-style: solid;
+            background-color: #d0adde;
+
+        }
+        #naranja{
+            
+            border-style: solid;
+            background-color: #ffb56a;
+
+        }
+        #azul{
+            
+            border-style: solid;
+            background-color: #8080ff;
+
+        }
+        #verde{
+            
+            border-style: solid;
+            background-color: #b3ff66;
+
+        }
+
+        /* CLASES */
+
+        .rosado{
+            background-color: #ff80ff;
+        }
+
+        .purpura{
+            background-color: #d0adde;
+        }
+
+        .naranja{
+            background-color: #ffb56a;
+        }
+
+        .azul{
+            background-color: #8080ff;
+        }
+
+        .verde{
+            background-color: #b3ff66;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <section  id="container">
+        <h1>Ejercicio 3 | Taller 2</h1>
+        <div id="rosado"></div>
+        <div id="purpura"></div>
+        <div id="naranja"></div>
+        <div id="azul"></div>
+        <div id="verde"></div>
+
+    </section>
+    <script>
+
+        //  ----- CUADRO ROSADO ----------
+       let rosado= document.getElementById('rosado');
+        rosado.addEventListener('mouseover', function(){
+            document.getElementById('container').setAttribute('class','rosado')
+           // background-color
+        });
+        
+        rosado.addEventListener('mouseout', function(){
+            document.getElementById('container').setAttribute('class','cont')
+           // background-color
+        });
+      
+//
+        
+      //  ----- CUADRO PURPURA ----------
+
+      let purpura= document.getElementById('purpura');
+        purpura.addEventListener('mouseover', function(){
+            document.getElementById('container').setAttribute('class','purpura')
+           // background-color
+        });
+        
+        purpura.addEventListener('mouseout', function(){
+            document.getElementById('container').setAttribute('class','cont')
+           
+        });
+     
+      //  ----- CUADRO NARANJA ----------
+
+      let naranja= document.getElementById('naranja');
+        naranja.addEventListener('mouseover', function(){
+            document.getElementById('container').setAttribute('class','naranja')
+           // background-color
+        });
+        
+        naranja.addEventListener('mouseout', function(){
+            document.getElementById('container').setAttribute('class','cont')
+           
+        });
+      
+      //  ----- CUADRO AZUL ----------
+
+      let azul= document.getElementById('azul');
+        azul.addEventListener('mouseover', function(){
+            document.getElementById('container').setAttribute('class','azul')
+           // background-color
+        });
+        
+        azul.addEventListener('mouseout', function(){
+            document.getElementById('container').setAttribute('class','cont')
+           
+        });
+      
+      //  ----- CUADRO VERDE ----------
+
+      let verde= document.getElementById('verde');
+        verde.addEventListener('mouseover', function(){
+            document.getElementById('container').setAttribute('class','verde')
+           // background-color
+        });
+        
+        verde.addEventListener('mouseout', function(){
+            document.getElementById('container').setAttribute('class','cont')
+           
+        });
+      
+    </script>
+</body>
+
+</html>

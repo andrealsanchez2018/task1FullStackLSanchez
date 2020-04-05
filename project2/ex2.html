@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Ejercicio 2</title>
+    <style>
+
+*{
+   background-color: #2D4172; 
+}
+
+h1{
+            background-color: white;
+            font-size: 50px;
+            margin-bottom: 50px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+.div{
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            border: 1px solid #aaa;
+        }
+        .section{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 2 | Proyecto 2</h1>
+
+
+    <button type="button" class="btn btn-outline-info " id="botonC" onclick="crear();">Crear</button>
+    <button type="button" class="btn btn-outline-info " id="botonE" onclick="eliminar();">Eliminar</button>
+    <button type="button" class="btn btn-outline-info " id="botonB" onclick="sinImpares();">Borrar Impar</button>
+    <section class="section" id="container">
+       
+    </section>
+
+
+<script>
+
+//Declaración de variables
+
+// Creo contador
+var n = 0; 
+let seccion = document.createElement('section');
+let cuadro = document.createElement('div');
+
+
+  // crear datos:
+        function crear() {
+                       
+            n++;
+            var idVar = `id${n}`
+        let cuadro = document.createElement('div');
+       
+    // Creamos el texto
+        let textCuadro = document.createTextNode(`${n}`);
+        cuadro.appendChild(textCuadro);
+        document.getElementById('container').appendChild(cuadro);
+        cuadro.setAttribute('id', idVar);
+        cuadro.setAttribute('class', 'div');
+      
+         };
+        
+    //Eliminar cuadros
+         function eliminar(){
+            
+            document.getElementById("container").innerHTML ="";
+         
+         }
+       
+    //     -------------- Eliminar impares --------------------
+    
+    function sinImpares(){
+                
+               for (i=1; i<n ; i++)
+                if(i % 2 == 0) {
+                    
+                    var idVar = `id${n}`
+                    console.log(idVar)
+                    //seccion.removeChild(`id6`)
+                    //document.getElementById('container').removeChild(idVar);
+                    document.getElementById(`id${n}`).innerHTML ="";
+                }
+            } 
+    </script>
+        
+
+</body>
+</html>

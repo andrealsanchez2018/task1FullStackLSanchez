@@ -1,0 +1,35 @@
+
+*{
+    background-color: rgb(233, 169, 146);
+}
+
+
+button{
+
+   margin-right: auto;
+}
+
+.row2{
+    padding: 11%;
+}
+.row3{
+     padding: 10% 10% 5% 10%; 
+    text-align: center; 
+    display: block; 
+}
+.row{
+    
+    margin: auto;
+          padding: 150px 0 220px 400px;  */
+            max-width: 100%;
+            max-height:100%;
+
+}
+
+
+
+.row4{
+    padding: 3% 0 10% 20%;
+    text-align: center;
+}
+
