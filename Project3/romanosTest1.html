@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanos</title>
+</head>
+<body>
+    <div>
+        <input id="insert" type="text">
+        <button id="convert" onclick="run()">Convertir</button>
+    </div>
+    <div id="container"></div>
+    <script>
+
+
+        class Romans{
+            constructor(thousand,hundred,ten,one){
+                this.thousand = thousand;
+                this.hundred = hundred;
+                this.ten = ten;
+                this.one = one;
+            }
+
+            post(){
+                return `the number that you want to turn into roman is: ${this.thousand}${this.hundred}${this.ten}${this.one}`
+            }
+        }
+
+        function run(){
+         
+         let romans = new Romans(document.getElementById('insert').value)
+         document.getElementById('container').innerHTML = romans.post()
+ 
+         }
+
+        
+    </script>
+</body>
+</html>
