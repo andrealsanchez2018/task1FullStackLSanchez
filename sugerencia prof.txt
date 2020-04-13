@@ -1,0 +1,3 @@
+setAttribute('onclick', 'valor')
+innerHTML += `<button onclick=''> elemento </button>`
+innerHTML += `<button onclick='funcionPrueba("id"+cont)'> elemento </button>`'id'${cont}
