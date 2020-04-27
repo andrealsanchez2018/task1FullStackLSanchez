@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ahorcado</title>
+    <style>
+        
+        .container{
+            margin: 20% 0 20% 25%;
+            display: block;
+        }
+        
+        .caja{
+            width: 80px;
+            display: inline-block;
+            color: white;
+            align-content: center;
+            overflow: auto;
+        }
+
+        #letra1{
+            border-style: solid;
+            background-color: #ff80ff;
+        }
+        
+
+        #letra2{
+            border-style: solid;
+            background-color: #d0adde;
+        }
+
+        #letra3{
+            border-style: solid;
+            background-color: #ffb56a;
+        }
+
+        #letra4{
+            border-style: solid;
+            background-color: #8080ff;
+        }
+
+        #letra5{
+            border-style: solid;
+            background-color: #b3ff66;
+        }
+
+        #letra6{
+            border-style: solid;
+            background-color: #66edff;
+        }
+
+        .boton{
+            margin: auto;
+            display: inline-block;
+        }
+
+        #pistas{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" class="caja" placeholder="Escribe letra1" id="letra1">
+        <input type="text" class="caja" placeholder="Escribe letra2" id="letra2">
+        <input type="text" class="caja" placeholder="Escribe letra3" id="letra3">
+        <input type="text" class="caja" placeholder="Escribe letra4" id="letra4">
+        <input type="text" class="caja" placeholder="Escribe letra5" id="letra5">
+        <input type="text" class="caja" placeholder="Escribe letra6" id="letra6">
+        <br> <br>
+            <button class="boton" onclick="pista();">Pista</button>
+            <button class="boton" onclick= "comparison();">Finalizar</button>
+            <div id="pistas">
+
+            </div>
+    </div>
+    
+    <script>
+
+        let letra1, letra2, letra3, letra4, letra5;
+        function pista(){
+        
+        /* pista1 = document.getElementById('pistas'); */
+        pista2 = document.createTextNode("La palabra empieza por c");
+
+        document.getElementById('pistas').appendChild(pista2);
+
+        }
+
+        function captura() {
+             letra1 = document.getElementById('letra1').value;
+             letra2 = document.getElementById('letra2').value;
+             letra3 = document.getElementById('letra3').value;
+             letra4 = document.getElementById('letra4').value;
+             letra5 = document.getElementById('letra5').value;
+             letra6 = document.getElementById('letra6').value; 
+        }
+            
+
+
+         let alerta = "solid 2px red";
+         let sinalerta = "solid 2px green";
+
+         function comparison() {
+            captura();
+             if(letra1 == 'c' && letra2 == 'a' && letra3 == 'm' && letra4 == 'a' && letra5 == 'r' && letra6 == 'a'){
+                alert("You got it!")
+             } else{
+                
+                             
+             if(letra1 !== 'c'){
+
+                document.getElementById('letra1').style.border = alerta;
+                alert("aqui no va esa letra!");
+                
+                // letra1.pop(); // no esta funcionando mirar
+             }else{
+                document.getElementById('letra1').style.border = sinalerta;
+             }
+             if(letra2 !== 'a'){
+                document.getElementById('letra2').style.border = alerta;
+                alert("aqui no va esa letra!");
+                // letra1.pop(); // no esta funcionando mirar
+             }else{
+                document.getElementById('letra2').style.border = sinalerta;
+
+             }
+              if(letra3 !== 'm'){
+                document.getElementById('letra3').style.border = alerta;
+                alert("aqui no va esa letra!");
+                // letra1.pop(); // no esta funcionando mirar
+             }else{
+                document.getElementById('letra3').style.border = sinalerta;
+
+             }
+             if(letra4 !== 'a'){
+                document.getElementById('letra4').style.border = alerta;
+                alert("aqui no va esa letra!");
+                // letra1.pop(); // no esta funcionando mirar
+             }else{
+                document.getElementById('letra4').style.border = sinalerta;
+
+             }
+             if(letra5 !== 'r'){
+                document.getElementById('letra5').style.border = alerta;
+                alert("aqui no va esa letra!");
+                // letra1.pop(); // no esta funcionando mirar
+             }else{
+                document.getElementById('letra5').style.border = sinalerta;
+
+             }
+             if(letra6 !== 'a'){
+                document.getElementById('letra6').style.border = alerta;
+                alert("aqui no va esa letra!");
+                // letra1.pop(); // no esta funcionando mirar
+             }else{
+                document.getElementById('letra6').style.border = sinalerta;
+
+             }
+            }
+         }
+
+
+
+         /* otra forma de hacerlo podría ser un random de distintas palabras y que dependiendo 
+         de la palabra cree las cajas necesarias para la misma y haga la comparación respectiva */
+    </script>
+</body>
+</html>
