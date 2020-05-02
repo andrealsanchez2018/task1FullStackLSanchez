@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triqui</title>
+    <style>
+
+h1{
+    color: tomato;
+    text-align: center;
+}
+
+#container{
+    /* display: inline-block; */
+    border: 3px solid violet;
+    padding: 0 32.5% 0 32.5%;
+}
+
+.yellow{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    border: solid 3px yellow;
+    vertical-align: text-bottom;
+    text-align: center;
+    overflow: auto; /* elementos internos NO superen el limite de la caja */ 
+
+}
+
+.blue{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    border: solid 3px blue;
+    text-align: center;
+    overflow: auto; /* elementos internos NO superen el limite de la caja */ 
+
+}
+
+.red{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+    border: solid 3px red;
+    align-content: center;
+    overflow: auto; /* elementos internos NO superen el limite de la caja */ 
+
+}
+
+
+img{
+    width: 110px;
+    height: 110px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <div class="yellow" id="id1">
+        <h1 id="text1">X</h1>
+        </div>
+        <div class="yellow" id="id2" ></div>
+        <div class="yellow" id="id3" ></div>
+
+      
+        <div class="blue" id="id4" ></div>
+        <div class="blue" id="id5" ></div>
+        <div class="blue" id="id6" ></div>
+
+
+        <div class="red" id="id7" ></div>
+        <div class="red" id="id8" ></div>
+        <div class="red" id="id9" ></div> 
+        
+        
+    </div>
+
+
+    <script>
+        let padre = document.getElementById('container');
+//opciones de ganar
+        let winMix =[{'option1' : ['id1', 'id2','id3'], 
+              'option2' : ['id4', 'id5','id6'],
+              'option3' : ['id7', 'id8','id9'],
+              'option4' : ['id1', 'id4','id7'],
+              'option5' : ['id2', 'id5','id8'],
+              'option6' : ['id3', 'id6','id9'],
+              'option7' : ['id1', 'id5','id9'],
+              'option8' : ['id7', 'id5','id3'],
+}] 
+//guardar el id de la posicion del random:
+        var realMixMaq = [];
+        let positionMaquina= ['id1', 'id2','id3', 'id4', 'id5', 'id6','id7','id8','id9'];
+
+// Turno de la maquina
+
+/* setTimeout(function turnoM(){
+    contM = 1;    
+    var id = Math.floor(Math.random() * positionMaquina.length);
+    realMixMaq.push(positionMaquina[id]);
+       let xOo = document.createElement('h1')         
+        CapturaIdMAq =document.getElementById(`${positionMaquina[id]}`).setAttribute('onclick', 'turnoM();')
+       xOo.setAttribute('class','img')
+       document.getElementById(`${positionMaquina[id]}`).appendChild(xOo)
+        
+    
+       setTimeout( */
+        // function place1User(){
+
+            let click1 = document.createElement('h1')
+        document.getElementById('id1').setAttribute('onclick','box1()')
+
+    function box1(){
+        var state0 = document.getElementById('text1')
+                if(state0 !== null){
+                    var state1 = document.getElementById('text1').innerText;
+                     if (state1 !=='X'){
+      
+            
+                let o = document.createTextNode('O')
+                document.getElementById('id1').appendChild(click1)    
+                click1.setAttribute('id','text1')
+                document.getElementById('text1').appendChild(o);
+
+            } else{
+            alert("esta ocupado!")
+        }
+                    
+                } else{
+                    let o = document.createTextNode('O')
+                document.getElementById('id1').appendChild(click1)    
+                click1.setAttribute('id','text1')
+                document.getElementById('text1').appendChild(o);
+                }
+        
+    }
+
+       
+        let click2 = document.createElement('h1')
+        document.getElementById('id2').setAttribute('onclick','box2()')
+            function box2(){
+                let o = document.createTextNode('O')
+                document.getElementById('id2').appendChild(click2)    
+        click2.setAttribute('id','text2')
+        document.getElementById('text2').appendChild(o);
+
+            }
+
+       
+        let click3 = document.createElement('h1')
+        document.getElementById('id3').setAttribute('onclick','box3()')
+            function box3(){
+                let x = document.createTextNode('O')
+                document.getElementById('id3').appendChild(click3)    
+        click3.setAttribute('id','text3')
+        document.getElementById('text3').appendChild(x);
+
+            }
+
+       
+       
+            let click4 = document.createElement('h1')
+        document.getElementById('id4').setAttribute('onclick','box4()')
+            function box4(){
+                let o = document.createTextNode('O')
+                document.getElementById('id4').appendChild(click4)    
+        click4.setAttribute('id','text4')
+        document.getElementById('text4').appendChild(o);
+
+            }
+
+       
+       
+            let click5 = document.createElement('h1')
+        document.getElementById('id5').setAttribute('onclick','box5()')
+            function box5(){
+                let o = document.createTextNode('O')
+                document.getElementById('id5').appendChild(click5)    
+        click5.setAttribute('id','text5')
+        document.getElementById('text5').appendChild(o);
+
+            }
+
+       
+       
+            let click6 = document.createElement('h1')
+        document.getElementById('id6').setAttribute('onclick','box6()')
+            function box6(){
+                let o = document.createTextNode('O')
+                document.getElementById('id6').appendChild(click6)    
+        click6.setAttribute('id','text6')
+        document.getElementById('text6').appendChild(o);
+
+            }
+
+       
+       
+            let click7 = document.createElement('h1')
+        document.getElementById('id7').setAttribute('onclick','box7()')
+            function box7(){
+                let o = document.createTextNode('O')
+                document.getElementById('id7').appendChild(click7)    
+        click7.setAttribute('id','text7')
+        document.getElementById('text7').appendChild(o);
+
+            }
+
+       
+       
+            let click8 = document.createElement('h1')
+        document.getElementById('id8').setAttribute('onclick','box8()')
+            function box8(){
+                let o = document.createTextNode('O')
+                document.getElementById('id8').appendChild(click8)    
+        click8.setAttribute('id','text8')
+        document.getElementById('text8').appendChild(o);
+
+            }
+       
+       
+            let click9 = document.createElement('h1')
+        document.getElementById('id9').setAttribute('onclick','box9()')
+            function box9(){
+                let o = document.createTextNode('O')
+                document.getElementById('id9').appendChild(click9)    
+        click9.setAttribute('id','text9')
+        document.getElementById('text9').appendChild(o);
+
+            }
+/* 
+    },2000);
+    
+   
+    
+
+        function finish(){
+            contM++;
+
+            
+            if(contM === 4){ // 4 turnos para ganar alguno de los 2
+                clearInterval(intervalo);
+                //mostrar mensaje ganador de la maquina
+                setTimeout(function(){
+                    alert('GanA LA mAQUINA');
+                    location.reload();
+                }, 500);
+            }
+
+        }
+       
+    
+    
+    var intervalo = setInterval(finish, 2000);  
+}, 2000); */
+    </script>
+</body>
+</html>
